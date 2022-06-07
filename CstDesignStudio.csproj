@@ -1,0 +1,111 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EAB2359D-3BB7-4C35-86C8-AFA1D98F782B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CstDesignStudio</RootNamespace>
+    <AssemblyName>CstDesignStudio</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <WarningLevel>3</WarningLevel>
+    <FileVersion>20.209.0027</FileVersion>
+    <InformationalVersion>20.209.0027</InformationalVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\Program Files\Acumatica ERP\DesignStudioDev\App_Data\Projects\CstDesignStudio\CstDesignStudio\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CstDesignStudio">
+      <HintPath>..\..\..\..\..\Bin\CstDesignStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Common">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Acumatica ERP\DesignStudioDev\Bin\PX.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.CS.Contracts">
+      <HintPath>..\..\..\..\..\Bin\PX.CS.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Data">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Acumatica ERP\DesignStudioDev\Bin\PX.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.Data.BQL.Fluent">
+      <HintPath>..\..\..\..\..\Bin\PX.Data.BQL.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Objects">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Acumatica ERP\DesignStudioDev\Bin\PX.Objects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PX.Objects.AM">
+      <HintPath>..\..\..\..\..\Bin\PX.Objects.AM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DACExtensions\AccountExt.cs" />
+    <Compile Include="DACExtensions\AMMTranExt.cs" />
+    <Compile Include="DACExtensions\CATransferExt.cs" />
+    <Compile Include="DACExtensions\FADetailsExt.cs" />
+    <Compile Include="DACExtensions\POReceiptExt.cs" />
+    <Compile Include="DACExtensions\RQRequestExt.cs" />
+    <Compile Include="DACExtensions\RQRequisitionExt.cs" />
+    <Compile Include="DACExtensions\SOLineExt.cs" />
+    <Compile Include="DACExtensions\SOShipmentExt.cs" />
+    <Compile Include="Descriptor\Message.cs" />
+    <Compile Include="INReceiptEntryExt.cs" />
+    <Compile Include="MatlReqWizard1.cs" />
+    <Compile Include="MatlReqWizard2.cs" />
+    <Compile Include="POReceiptEntryExt.cs" />
+    <Compile Include="ProdDetailExt.cs" />
+    <Compile Include="ProdMaintExt.cs" />
+    <Compile Include="SOOrderEntryExt.cs" />
+    <Compile Include="DACExtensions\AMProdItemExt.cs" />
+    <Compile Include="DACExtensions\POOrderExt.cs" />
+    <Compile Include="DAC\CstPOLineSum.cs" />
+    <Compile Include="POOrderEntryExt.cs" />
+    <Compile Include="DACExtensions\POLineExt.cs" />
+    <Compile Include="DACExtensions\POReceiptLineExt.cs" />
+    <Compile Include="DACExtensions\INTranExt.cs" />
+    <Compile Include="DACExtensions\INRegisterExt.cs" />
+    <Compile Include="DACExtensions\AMBatchExt.cs" />
+    <Compile Include="DACExtensions\InventoryItemExt.cs" />
+    <Compile Include="DACExtensions\SOOrderExt.cs" />
+    <Compile Include="DAC\PrimarkOrders.cs" />
+    <Compile Include="SOCreatePrimarkOrders.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SOShipmentEntryExt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
